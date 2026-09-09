@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+
+<style>
+body{
+    text-align:center;
+    margin-top:50px;
+}
+
+input{
+    width:200px;
+    height:40px;
+    font-size:20px;
+}
+
+button{
+    width:45px;
+    height:45px;
+    font-size:20px;
+    margin:2px;
+
+}
+</style> 
+
+</head>
+<body>
+
+<h2>Calculator</h2>
+
+<input type="text" id="display" readonly>
+<br><br>
+
+<button onclick="show('7')">7</button>
+<button onclick="show('8')">8</button>
+<button onclick="show('9')">9</button>
+<button onclick="show('/')">/</button>
+<br>
+
+<button onclick="show('4')">4</button>
+<button onclick="show('5')">5</button>
+<button onclick="show('6')">6</button>
+<button onclick="show('*')">*</button>
+<br>
+
+<button onclick="show('1')">1</button>
+<button onclick="show('2')">2</button>
+<button onclick="show('3')">3</button>
+<button onclick="show('-')">-</button>
+<br>
+
+<button onclick="show('0')">0</button>
+<button onclick="show('+')">+</button>
+<button onclick="answer()">=</button>
+<button onclick="clearBox()">C</button>
+
+<script>
+function show(value){
+    document.getElementById("display").value += value;
+}
+
+function answer(){
+    document.getElementById("display").value =
+    eval(document.getElementById("display").value);
+}
+
+function clearBox(){
+    document.getElementById("display").value = "";
+}
+</script>
+
+</body>
+</html>
