@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        #event-container{
+            background-color: aquamarine;
+            color: black;
+            margin: auto;
+            height: auto;
+            width: 50%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px  rgb(253, 24, 24);
+            
+            
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+            text-overflow: none;
+        }
+        #what1, #what2, #what3{
+            background-color: whitesmoke;
+        }
+    </style>
+    
+    </html>
+<body>
+
+<div id="event-container"> 
+            
+    <!-- <form action="">
+         <h1 >Mouse Events</h1>
+        <label for="">Keydown:</label><br>
+        <input type="text" onkeydown="eventcall()" id="what1"><br><br>
+        <label for="">Keyup:</label><br>
+        <input type="text" onkeyup="eventcall()" id="what2"><br><br>
+        <label for="">Keypress:</label><br>
+        <input type="text" onkeypress="eventcall()" id="what3"><br><br>
+
+    </form> -->
+
+    <!-- <form action="">
+         <h1 >Mouse Events</h1>
+        <label for="">Keydown:</label><br>
+        <input type="text" onkeydown="alert(this.value)" id="what1"><br><br>
+        <label for="">Keyup:</label><br>
+        <input type="text" onkeyup="alert(this.value)" id="what2"><br><br>
+        <label for="">Keypress:</label><br>
+        <input type="text" onkeypress="alert(this.value)" id="what3"><br><br>
+
+    </form> -->
+    <form action="" id="whatpapa">
+        
+        <h1>Mouse Events</h1>
+        <label for="">Keydown:</label><br>
+        <input type="text" onkeydown="document.getElementById('whatpapa').style.background=this.value" id="what1"><br><br>
+        <label for="">Keyup:</label><br>
+        <input type="text" onkeyup="document.getElementById('what2').style.background=this.value" id="what2"><br><br>
+        <label for="">Keypress:</label><br>
+        <input type="text" onkeypress ="document.getElementById('what3').style.background=this.value" id="what3"><br><br>
+
+    </form>
+</div>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
