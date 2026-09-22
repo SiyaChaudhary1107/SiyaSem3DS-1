@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +29,7 @@
             margin: 20px;
             padding: 10px;
             border: 1px solid gray;
+            display: none;
         }
 
         button {
@@ -79,7 +81,9 @@
 
             <h1>Quiz</h1>
 
-            <div class="question">
+            <!-- Question 1 -->
+
+            <div class="question" id="question1">
 
                 <p><b>1. Which language is used to make a webpage interactive?</b></p>
 
@@ -93,11 +97,16 @@
                 <br>
 
                 <input type="radio" name="q1" value="D"> SQL
+                <br><br>
+
+                <button onclick="nextQ1()">Next Question</button>
 
             </div>
 
 
-            <div class="question">
+            <!-- Question 2 -->
+
+            <div class="question" id="question2">
 
                 <p><b>2. Which symbol is used for a single-line comment in JavaScript?</b></p>
 
@@ -111,11 +120,16 @@
                 <br>
 
                 <input type="radio" name="q2" value="D"> &lt;!-- --&gt;
+                <br><br>
+
+                <button onclick="nextQ2()">Next Question</button>
 
             </div>
 
 
-            <div class="question">
+            <!-- Question 3 -->
+
+            <div class="question" id="question3">
 
                 <p><b>3. Which keyword is used to declare a variable?</b></p>
 
@@ -129,11 +143,16 @@
                 <br>
 
                 <input type="radio" name="q3" value="D"> show
+                <br><br>
+
+                <button onclick="nextQ3()">Next Question</button>
 
             </div>
 
 
-            <div class="question">
+            <!-- Question 4 -->
+
+            <div class="question" id="question4">
 
                 <p><b>4. Which function displays output in the console?</b></p>
 
@@ -147,11 +166,16 @@
                 <br>
 
                 <input type="radio" name="q4" value="D"> output()
+                <br><br>
+
+                <button onclick="nextQ4()">Next Question</button>
 
             </div>
 
 
-            <div class="question">
+            <!-- Question 5 -->
+
+            <div class="question" id="question5">
 
                 <p><b>5. Which function is used to show a popup message?</b></p>
 
@@ -165,11 +189,11 @@
                 <br>
 
                 <input type="radio" name="q5" value="D"> show()
+                <br><br>
+
+                <button onclick="submitQuiz()">Submit Quiz</button>
 
             </div>
-
-
-            <button onclick="submitQuiz()">Submit Quiz</button>
 
         </div>
 
@@ -191,6 +215,8 @@
 
     <script>
 
+        // Start Quiz
+
         function startQuiz() {
 
             let name = document.getElementById("name").value;
@@ -207,15 +233,58 @@
             document.getElementById("studentForm").style.display = "none";
 
             document.getElementById("quiz").style.display = "block";
+
+            document.getElementById("question1").style.display = "block";
         }
 
+
+        // Question 1
+
+        function nextQ1() {
+
+            document.getElementById("question1").style.display = "none";
+
+            document.getElementById("question2").style.display = "block";
+        }
+
+
+        // Question 2
+
+        function nextQ2() {
+
+            document.getElementById("question2").style.display = "none";
+
+            document.getElementById("question3").style.display = "block";
+        }
+
+
+        // Question 3
+
+        function nextQ3() {
+
+            document.getElementById("question3").style.display = "none";
+
+            document.getElementById("question4").style.display = "block";
+        }
+
+
+        // Question 4
+
+        function nextQ4() {
+
+            document.getElementById("question4").style.display = "none";
+
+            document.getElementById("question5").style.display = "block";
+        }
+
+
+        // Submit Quiz
 
         function submitQuiz() {
 
             let score = 0;
 
 
-            // Question 1
             let q1 = document.querySelector('input[name="q1"]:checked');
 
             if (q1 != null && q1.value == "C") {
@@ -223,7 +292,6 @@
             }
 
 
-            // Question 2
             let q2 = document.querySelector('input[name="q2"]:checked');
 
             if (q2 != null && q2.value == "A") {
@@ -231,7 +299,6 @@
             }
 
 
-            // Question 3
             let q3 = document.querySelector('input[name="q3"]:checked');
 
             if (q3 != null && q3.value == "A") {
@@ -239,7 +306,6 @@
             }
 
 
-            // Question 4
             let q4 = document.querySelector('input[name="q4"]:checked');
 
             if (q4 != null && q4.value == "B") {
@@ -247,7 +313,6 @@
             }
 
 
-            // Question 5
             let q5 = document.querySelector('input[name="q5"]:checked');
 
             if (q5 != null && q5.value == "C") {
@@ -273,11 +338,19 @@
 
             document.getElementById("marks").innerText =
                 "Marks: " + score + " / 5";
-
         }
 
     </script>
 
 </body>
 </html>
+
+
+
+<div id="question1">
+
+
+
+
+<div id="question1">
 
